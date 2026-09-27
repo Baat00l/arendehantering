@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Ärendehanteringssystem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Supportärenden</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Skapa / redigera ärende</h2>
+      <form id="ticket-form">
+        <input type="hidden" id="ticket-id">
+
+        <label for="title">Titel</label>
+        <input type="text" id="title" required>
+
+        <label for="description">Beskrivning</label>
+        <textarea id="description" required></textarea>
+
+        <label for="status">Status</label>
+        <select id="status" required>
+          <option value="Öppen">Öppen</option>
+          <option value="Pågående">Pågående</option>
+          <option value="Klar">Klar</option>
+        </select>
+
+        <button type="submit">Spara ärende</button>
+        <button type="button" id="reset-btn">Rensa formulär</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Alla ärenden</h2>
+      <div id="tickets-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Enkel ärendehanteringssystem – skolprojekt</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
